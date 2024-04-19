@@ -2,10 +2,10 @@ import React from "react";
 
 function AsideItem({ icon, name }) {
   return (
-    <li className="flex items-center justify-start gap-3">
+    <a href="#" className="flex items-center justify-start gap-3">
       <div>{icon}</div>
-      <p>{name}</p>
-    </li>
+      <p className="text-[0.9rem]">{name}</p>
+    </a>
   );
 }
 

@@ -2,9 +2,11 @@ import React from "react";
 
 function Button({ style, content }) {
   return (
-    <div className={`rounded-full text-center font-medium ${style}`}>
+    <button
+      className={`rounded-full text-center font-medium text-[0.75rem] p-1 ${style}`}
+    >
       {content}
-    </div>
+    </button>
   );
 }
 

@@ -8,19 +8,22 @@ import Button from "../Button/Button.jsx";
 import Image from "../Image/Image.jsx";
 import profileImage from "../../assets/profile-image.jpg";
 import { Ellipsis } from "lucide-react";
+import NameWithSub from "../NameWithSub/NameWithSub.jsx";
 
 export const mainColor = "#61DAFB";
 
 function Aside() {
   const renderAsideItems = asideItems.map((item) => (
-    <AsideItem key={item.name} icon={item.icon} name={item.name} />
+    <li key={item.name}>
+      <AsideItem icon={item.icon} name={item.name} />
+    </li>
   ));
   return (
-    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[210px] border border-[#333333]">
+    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[220px] border-e border-[#333333]">
       <div>
-        <div className="">
+        <a href="" className="">
           <FontAwesomeIcon icon={faXTwitter} size="2x" color="white" />
-        </div>
+        </a>
         <ul className="mt-5 decoration-0 flex flex-col gap-6">
           {renderAsideItems}
         </ul>
@@ -28,14 +31,11 @@ function Aside() {
           <Button style="bg-mainColor w-[180px] py-2" content="Post" />
         </div>
       </div>
-      <div className="flex items-center justify-between gap-3">
+      <a href="#" className="flex items-center justify-between gap-3">
         <Image src={profileImage} alt="uset profile image" style="w-10" />
-        <div className="text-[0.8rem]">
-          <p className="font-bold">Mohammad Dwika...</p>
-          <p className="text-[#666]">@MohammadDwika..</p>
-        </div>
+        <NameWithSub name="Mohammad Dwika..." sub="@MohammadDwika..." />
         <Ellipsis size={"20px"} />
-      </div>
+      </a>
     </div>
   );
 }

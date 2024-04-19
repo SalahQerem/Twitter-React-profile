@@ -6,6 +6,9 @@ export default {
       backgroundColor: {
         mainColor: "#1d9bf0",
       },
+      textColor: {
+        secondary: "#666",
+      },
     },
   },
   plugins: [],
