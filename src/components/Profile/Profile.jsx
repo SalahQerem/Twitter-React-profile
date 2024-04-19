@@ -23,8 +23,8 @@ import userImage4 from "../../assets/user-photo-4.jpg";
 
 function Profile() {
   return (
-    <div className="h-full max-w-[500px] border-e border-[#333333] text-xs">
-      <div className="flex items-center justify-start gap-6 py-1 px-3">
+    <div>
+      <div className="flex items-center justify-start gap-6 px-3">
         <ArrowLeft size="20px" />
         <NameWithSub
           name="React"
@@ -49,12 +49,11 @@ function Profile() {
           <Button content="Following" style="border border-[#5e5e5e] px-3" />
         </div>
       </div>
-      <div className="flex flex-col gap-2 mt-3 p-2">
-        <NameWithSub
-          name="React"
-          sub="@reactjs"
-          nameStyle="font-semibold text-base"
-        />
+      <div className="flex flex-col gap-2 mt-2 p-2">
+        <div>
+          <h1 className="text-[0.75rem] font-semibold text-base">React</h1>
+          <p className="text-secondary text-[0.7rem]">@reactjs</p>
+        </div>
         <p className="">The library for web and native user interfaces</p>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
@@ -82,18 +81,18 @@ function Profile() {
             nameStyle="text-[0.7rem]"
           />
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <div className="flex items-center w-[40px]">
-            <Image src={userImage1} alt="user image 1" style="w-5 z-20" />
+            <Image src={userImage1} alt="user image 1" style="w-4 z-20" />
             <Image
               src={userImage2}
               alt="user image 2"
-              style="w-5 translate-x-[-10px] z-10"
+              style="w-4 translate-x-[-8px] z-10"
             />
             <Image
               src={userImage3}
               alt="user image 3"
-              style="w-5 translate-x-[-20px]"
+              style="w-4 translate-x-[-18px]"
             />
           </div>
           <p className="text-secondary">
@@ -102,44 +101,49 @@ function Profile() {
           </p>
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-3">
         <ul className="decoration-0 flex items-center justify-around border-b border-[#333333]">
           <li className="pb-3 px-1 border-b-2 border-[#1d9bf0] rounded-sm">
-            <p>Posts</p>
+            <h2>Posts</h2>
           </li>
           <li className="pb-3 px-1">
-            <p className="text-secondary">Replies</p>
+            <h2 className="text-secondary">Replies</h2>
           </li>
           <li className="pb-3 px-1">
-            <p className="text-secondary">Media</p>
+            <h2 className="text-secondary">Media</h2>
           </li>
           <li className="pb-3 px-1">
-            <p className="text-secondary">Likes</p>
+            <h2 className="text-secondary">Likes</h2>
           </li>
         </ul>
       </div>
-      <div className=" py-1 flex flex-col gap-1">
+      <div className="pt-1 flex flex-col gap-1">
         <div className="flex items-center gap-2 px-10">
           <Repeat2 color="#666" size="15px" />
           <p className="text-secondary">React reposted</p>
         </div>
-        <div className="flex items-center gap-2 px-4">
-          <Image src={userImage4} alt="user image 4" style="w-9" />
-          <div>
-            <p className="font-bold">
-              danabramov.bsky.social{" "}
-              <span className="text-secondary font-normal">
-                @dan_abramov - May29
-              </span>
-            </p>
-            <p className="font-light">
-              happy 10th birthday to{" "}
-              <a href="#" className="text-[#1D9BF0]">
-                @reactjs
-              </a>
-              !
-            </p>
+        <div className="flex justify-between px-4">
+          <div className="flex items-center gap-2">
+            <Image src={userImage4} alt="user image 4" style="w-8" />
+            <div>
+              <p className="font-bold">
+                danabramov.bsky.social{" "}
+                <span className="text-secondary font-normal">
+                  @dan_abramov - May29
+                </span>
+              </p>
+              <p className="font-light">
+                happy 10th birthday to{" "}
+                <a href="#" className="text-[#1D9BF0]">
+                  @reactjs
+                </a>
+                !
+              </p>
+            </div>
           </div>
+          <button>
+            <Ellipsis size="15px" color="#666" />
+          </button>
         </div>
         <div>
           <ul className="decoration-0 flex items-center justify-around border-b border-[#333333] pt-2">
