@@ -1,6 +1,6 @@
 import React from "react";
 // import style from "./aside.module.css";
-import AsideItem from "../AsideItem/AsideItem.jsx";
+import AsideItem from "../AsideLink/AsideLink.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { asideItems } from "./asideItems.js";

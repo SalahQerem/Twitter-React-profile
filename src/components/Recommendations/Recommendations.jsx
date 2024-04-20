@@ -7,6 +7,8 @@ import freeCodeCamp from "../../assets/freeCodeCamp.jpg";
 import tailwindCSS from "../../assets/test.png";
 import typescript from "../../assets/typescript.png";
 import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
+import Trend from "../Trend/Trend.jsx";
+import { trends } from "./trends.js";
 
 function Recommendations() {
   const SearchInput = styled("div")(({ theme }) => ({
@@ -49,8 +51,18 @@ function Recommendations() {
       },
     },
   }));
+
+  const renderTrends = trends.map((trend) => (
+    <Trend
+      name={trend.name}
+      posts={trend?.posts}
+      type={trend?.type}
+      isArabic={trend.isArabic}
+    />
+  ));
+
   return (
-    <div className="w-full px-2 flex flex-col gap-3 h-full">
+    <div className="w-full ps-4 pe-2 flex flex-col gap-3 h-full">
       <SearchInput
         sx={{
           borderRadius: "9999px",
@@ -70,7 +82,7 @@ function Recommendations() {
       </SearchInput>
       <Card>
         <h3 className="font-bold text-sm">You might like</h3>
-        <div className="flex flex-col gap-3 mt-2">
+        <div className="flex flex-col gap-3 mt-3">
           <RecomendedPage
             accountImg={tailwindCSS}
             name="Tailwind CSS"
@@ -87,10 +99,40 @@ function Recommendations() {
             sub="@freeCodeCamp"
           />
         </div>
-        <a href="#" className="text-[#1D9BF0] block mt-2 mb-1 text-xs">
+        <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
           Show more
         </a>
       </Card>
+      <Card>
+        <h3 className="font-bold text-sm">Trends for you</h3>
+        <div className="flex flex-col gap-4 mt-3">{renderTrends}</div>
+        <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
+          Show more
+        </a>
+      </Card>
+      <div className="ps-3">
+        <p className="text-secondary text-[0.6rem] flex flex-wrap gap-x-2">
+          <a href="#" className="hover:underline">
+            Terms of Service
+          </a>
+          <a href="#" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Cookie Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Accessibility
+          </a>
+          <a href="#" className="hover:underline">
+            Ads info
+          </a>
+          <a href="#" className="hover:underline">
+            More...
+          </a>
+          © 2024 X Corp.
+        </p>
+      </div>
     </div>
   );
 }
