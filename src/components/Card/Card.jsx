@@ -1,8 +1,11 @@
 import React from "react";
-import style from "./card.module.css";
 
-function Card() {
-  return <div className={`${style.test} bg-indigo-300`}>Card</div>;
+function Card({ children }) {
+  return (
+    <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
+      {children}
+    </div>
+  );
 }
 
 export default Card;

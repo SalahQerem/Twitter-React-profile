@@ -19,7 +19,7 @@ function Aside() {
     </li>
   ));
   return (
-    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[220px] border-e border-[#333333]">
+    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[190px] border-e border-[#333333]">
       <div>
         <a href="" className="">
           <FontAwesomeIcon icon={faXTwitter} size="2x" color="white" />
@@ -28,12 +28,16 @@ function Aside() {
           {renderAsideItems}
         </ul>
         <div className="mt-5">
-          <Button style="bg-mainColor w-[180px] py-2" content="Post" />
+          <Button style="bg-mainColor w-[160px] py-2" content="Post" />
         </div>
       </div>
-      <a href="#" className="flex items-center justify-between gap-3">
-        <Image src={profileImage} alt="uset profile image" style="w-10" />
-        <NameWithSub name="Mohammad Dwika..." sub="@MohammadDwika..." />
+      <a href="#" className="flex items-center justify-between gap-2">
+        <Image src={profileImage} alt="uset profile image" style="w-8" />
+        <NameWithSub
+          name="Mohammad Dwika..."
+          sub="@MohammadDwika..."
+          nameStyle="text-[0.65rem]"
+        />
         <Ellipsis size={"20px"} />
       </a>
     </div>

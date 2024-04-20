@@ -124,7 +124,7 @@ function Profile() {
         </div>
         <div className="flex justify-between px-4">
           <div className="flex items-center gap-2">
-            <Image src={userImage4} alt="user image 4" style="w-8" />
+            <Image src={userImage4} alt="user image 4" style="w-7" />
             <div>
               <p className="font-bold">
                 danabramov.bsky.social{" "}

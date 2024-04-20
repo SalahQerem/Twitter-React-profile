@@ -13,9 +13,9 @@ function RecomendedPage({
   return (
     <div className="flex items-start justify-between">
       <div className="flex items-start gap-2">
-        <Image src={accountImg} alt="account image" style="w-8 bg-white" />
+        <Image src={accountImg} alt="account image" style="w-7 bg-white" />
         <div>
-          <NameWithSub name={name} sub={sub} />
+          <NameWithSub name={name} sub={sub} nameStyle="font-normal" />
           {description && (
             <p className="font-normal text-[0.7rem]">
               {description}{" "}
