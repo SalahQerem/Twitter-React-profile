@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
 
-function WhoToFollowItem({
+const WhoToFollowItem = ({
   name,
   sub,
   description,
   otherFollowers,
   accountImg,
   descriptionLink,
-}) {
+}) => {
   return (
     <div>
       <div className="flex items-center gap-3 ps-5">
@@ -28,6 +28,6 @@ function WhoToFollowItem({
       />
     </div>
   );
-}
+};
 
 export default WhoToFollowItem;

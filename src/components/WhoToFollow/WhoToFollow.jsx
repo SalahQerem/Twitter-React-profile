@@ -4,7 +4,7 @@ import freeCodeCamp from "../../assets/freeCodeCamp.jpg";
 import tailwindCSS from "../../assets/test.png";
 import typescript from "../../assets/typescript.png";
 
-function WhoToFollow() {
+const WhoToFollow = () => {
   return (
     <div className="p-2 border-b border-[#333]">
       <h3 className="font-bold text-sm">Who to follow</h3>
@@ -44,6 +44,6 @@ function WhoToFollow() {
       </a>
     </div>
   );
-}
+};
 
 export default WhoToFollow;

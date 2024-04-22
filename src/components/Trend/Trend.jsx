@@ -1,7 +1,7 @@
 import { Ellipsis } from "lucide-react";
 import React from "react";
 
-function Trend({ name, type, posts, isArabic }) {
+const Trend = ({ name, type, posts, isArabic }) => {
   return (
     <div className={`${!isArabic && "flex items-center justify-between"}`}>
       <div>
@@ -22,6 +22,6 @@ function Trend({ name, type, posts, isArabic }) {
       )}
     </div>
   );
-}
+};
 
 export default Trend;

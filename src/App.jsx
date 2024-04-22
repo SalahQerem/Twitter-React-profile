@@ -7,13 +7,15 @@ import WhoToFollow from "./components/WhoToFollow/WhoToFollow.jsx";
 
 function App() {
   return (
-    <div className="flex items-center h-screen bg-black text-white">
-      <Aside />
-      <div className="h-full min-w-[490px] border-e border-[#333333] text-xs">
-        <Profile />
-        <WhoToFollow />
+    <div className="h-screen bg-black text-white">
+      <div className="flex items-center w-[60%] mx-auto h-full">
+        <Aside />
+        <div className="h-full min-w-[490px] border-e border-[#333333] text-xs">
+          <Profile />
+          <WhoToFollow />
+        </div>
+        <Recommendations />
       </div>
-      <Recommendations />
     </div>
   );
 }

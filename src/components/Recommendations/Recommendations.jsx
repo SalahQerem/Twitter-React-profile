@@ -1,59 +1,17 @@
-import React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import InputBase from "@mui/material/InputBase";
 import { Search } from "lucide-react";
-import Card from "../Card/Card.jsx";
+import React from "react";
 import freeCodeCamp from "../../assets/freeCodeCamp.jpg";
 import tailwindCSS from "../../assets/test.png";
 import typescript from "../../assets/typescript.png";
-import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
 import Trend from "../Trend/Trend.jsx";
+import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
+import { SearchIconWrapper, SearchInput, StyledInputBase } from "./styls.js";
 import { trends } from "./trends.js";
 
 function Recommendations() {
-  const SearchInput = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
-  }));
-
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    width: "100%",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
-      },
-    },
-  }));
-
   const renderTrends = trends.map((trend) => (
     <Trend
+      key={trend.name}
       name={trend.name}
       posts={trend?.posts}
       type={trend?.type}
@@ -62,7 +20,7 @@ function Recommendations() {
   ));
 
   return (
-    <div className="w-full ps-4 pe-2 flex flex-col gap-3 h-full">
+    <div className="w-[600px] ps-4 pe-2 flex flex-col gap-3 h-full pt-2">
       <SearchInput
         sx={{
           borderRadius: "9999px",
@@ -80,7 +38,7 @@ function Recommendations() {
           sx={{ fontSize: "14px" }}
         />
       </SearchInput>
-      <Card>
+      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
         <h3 className="font-bold text-sm">You might like</h3>
         <div className="flex flex-col gap-3 mt-3">
           <RecomendedPage
@@ -102,14 +60,14 @@ function Recommendations() {
         <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
           Show more
         </a>
-      </Card>
-      <Card>
+      </div>
+      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
         <h3 className="font-bold text-sm">Trends for you</h3>
         <div className="flex flex-col gap-4 mt-3">{renderTrends}</div>
         <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
           Show more
         </a>
-      </Card>
+      </div>
       <div className="ps-3">
         <p className="text-secondary text-[0.6rem] flex flex-wrap gap-x-2">
           <a href="#" className="hover:underline">

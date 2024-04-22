@@ -12,14 +12,14 @@ import NameWithSub from "../NameWithSub/NameWithSub.jsx";
 
 export const mainColor = "#61DAFB";
 
-function Aside() {
+const Aside = () => {
   const renderAsideItems = asideItems.map((item) => (
     <li key={item.name}>
       <AsideItem icon={item.icon} name={item.name} />
     </li>
   ));
   return (
-    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[190px] border-e border-[#333333]">
+    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[210px] border-e border-[#333333]">
       <div>
         <a href="" className="">
           <FontAwesomeIcon icon={faXTwitter} size="2x" color="white" />
@@ -32,7 +32,7 @@ function Aside() {
         </div>
       </div>
       <a href="#" className="flex items-center justify-between gap-2">
-        <Image src={profileImage} alt="uset profile image" style="w-8" />
+        <Image src={profileImage} alt="user profile image" style="w-8" />
         <NameWithSub
           name="Mohammad Dwika..."
           sub="@MohammadDwika..."
@@ -42,6 +42,6 @@ function Aside() {
       </a>
     </div>
   );
-}
+};
 
 export default Aside;

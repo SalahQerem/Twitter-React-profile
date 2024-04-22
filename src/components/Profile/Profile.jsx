@@ -21,7 +21,7 @@ import userImage2 from "../../assets/user-photo-2.jpg";
 import userImage3 from "../../assets/user-photo-3.jpg";
 import userImage4 from "../../assets/user-photo-4.jpg";
 
-function Profile() {
+const Profile = () => {
   return (
     <div>
       <div className="flex items-center justify-start gap-6 px-3">
@@ -49,7 +49,7 @@ function Profile() {
           <Button content="Following" style="border border-[#5e5e5e] px-3" />
         </div>
       </div>
-      <div className="flex flex-col gap-2 mt-2 p-2">
+      <div className="flex flex-col gap-2 mt-1 p-2">
         <div>
           <h1 className="text-[0.75rem] font-semibold text-base">React</h1>
           <p className="text-secondary text-[0.7rem]">@reactjs</p>
@@ -101,7 +101,7 @@ function Profile() {
           </p>
         </div>
       </div>
-      <div className="mt-3">
+      <div className="mt-1">
         <ul className="decoration-0 flex items-center justify-around border-b border-[#333333]">
           <li className="pb-3 px-1 border-b-2 border-[#1d9bf0] rounded-sm">
             <h2>Posts</h2>
@@ -146,7 +146,7 @@ function Profile() {
           </button>
         </div>
         <div>
-          <ul className="decoration-0 flex items-center justify-around border-b border-[#333333] pt-2">
+          <ul className="decoration-0 flex items-center justify-around border-b border-[#333333] pt-1">
             <li className="pb-3 px-1">
               <button className="flex items-center gap-2">
                 <MessageCircle color="#666" size="15px" />
@@ -181,6 +181,6 @@ function Profile() {
       </div>
     </div>
   );
-}
+};
 
 export default Profile;

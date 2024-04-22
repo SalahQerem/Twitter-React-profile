@@ -3,13 +3,13 @@ import Button from "../Button/Button.jsx";
 import Image from "../Image/Image.jsx";
 import NameWithSub from "../NameWithSub/NameWithSub.jsx";
 
-function RecomendedPage({
+const RecomendedPage = ({
   name,
   sub,
   accountImg,
   description,
   descriptionLink,
-}) {
+}) => {
   return (
     <div className="flex items-start justify-between">
       <div className="flex items-start gap-2">
@@ -30,6 +30,6 @@ function RecomendedPage({
       <Button content="Follow" style="bg-white text-black px-3 text-[0.7rem]" />
     </div>
   );
-}
+};
 
 export default RecomendedPage;

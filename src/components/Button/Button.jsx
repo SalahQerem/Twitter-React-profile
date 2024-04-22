@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ style, content }) {
+const Button = ({ style, content }) => {
   return (
     <button
       className={`rounded-full text-center font-medium text-[0.75rem] p-1 ${style}`}
@@ -8,6 +8,6 @@ function Button({ style, content }) {
       {content}
     </button>
   );
-}
+};
 
 export default Button;
