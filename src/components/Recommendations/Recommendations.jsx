@@ -4,7 +4,7 @@ import freeCodeCamp from "../../assets/freeCodeCamp.jpg";
 import tailwindCSS from "../../assets/test.png";
 import typescript from "../../assets/typescript.png";
 import Trend from "../Trend/Trend.jsx";
-import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
+import RecomendedPage from "../RecomendedPage/RecomendedPage.jsx";
 import { SearchIconWrapper, SearchInput, StyledInputBase } from "./styls.js";
 import { trends } from "./trends.js";
 

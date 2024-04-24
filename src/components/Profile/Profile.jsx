@@ -38,15 +38,13 @@ const Profile = () => {
           <Image src={profilePhoto} alt="profile personal photo" style="w-24" />
         </div>
         <div className="flex items-center gap-2">
-          <Button
-            content={<Ellipsis size={"15px"} />}
-            style="border border-[#5e5e5e]"
-          />
-          <Button
-            content={<BellPlus size={"15px"} />}
-            style="border border-[#5e5e5e]"
-          />
-          <Button content="Following" style="border border-[#5e5e5e] px-3" />
+          <Button style="border border-[#5e5e5e]">
+            <Ellipsis size={"15px"} />
+          </Button>
+          <Button style="border border-[#5e5e5e]">
+            <BellPlus size={"15px"} />
+          </Button>
+          <Button style="border border-[#5e5e5e] px-3">Following</Button>
         </div>
       </div>
       <div className="flex flex-col gap-2 mt-1 p-2">

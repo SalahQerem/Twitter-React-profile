@@ -18,7 +18,7 @@ const RecomendedPage = ({
           <NameWithSub name={name} sub={sub} nameStyle="font-normal" />
           {description && (
             <p className="font-normal text-[0.7rem]">
-              {description}{" "}
+              {description}
               <a href="#" className="text-[#1D9BF0]">
                 {descriptionLink}
               </a>
@@ -27,7 +27,7 @@ const RecomendedPage = ({
           )}
         </div>
       </div>
-      <Button content="Follow" style="bg-white text-black px-3 text-[0.7rem]" />
+      <Button style="bg-white text-black px-3 text-[0.7rem]">Follow</Button>
     </div>
   );
 };

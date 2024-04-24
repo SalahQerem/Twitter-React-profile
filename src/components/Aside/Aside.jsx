@@ -28,7 +28,7 @@ const Aside = () => {
           {renderAsideItems}
         </ul>
         <div className="mt-5">
-          <Button style="bg-mainColor w-[160px] py-2" content="Post" />
+          <Button style="bg-mainColor w-[160px] py-2">Post</Button>
         </div>
       </div>
       <a href="#" className="flex items-center justify-between gap-2">

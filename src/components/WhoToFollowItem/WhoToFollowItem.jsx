@@ -1,7 +1,7 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import RecomendedPage from "../recomendedPage/RecomendedPage.jsx";
+import RecomendedPage from "../RecomendedPage/RecomendedPage.jsx";
 
 const WhoToFollowItem = ({
   name,
