@@ -1,6 +1,5 @@
 import "./App.css";
 import Aside from "./components/Aside/Aside.jsx";
-import Card from "./components/Card/Card.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import Recommendations from "./components/Recommendations/Recommendations.jsx";
 import WhoToFollow from "./components/WhoToFollow/WhoToFollow.jsx";
