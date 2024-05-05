@@ -19,7 +19,7 @@ const Aside = () => {
     </li>
   ));
   return (
-    <div className="flex items-top justify-between h-full flex-col p-2 min-w-[210px] border-e border-[#333333]">
+    <div className="flex items-top justify-between flex-col p-2 w-[210px] border-e border-[#333333]">
       <div>
         <a href="" className="">
           <FontAwesomeIcon icon={faXTwitter} size="2x" color="white" />

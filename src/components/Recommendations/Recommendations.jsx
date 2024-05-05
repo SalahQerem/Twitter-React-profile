@@ -38,7 +38,7 @@ function Recommendations() {
           sx={{ fontSize: "14px" }}
         />
       </SearchInput>
-      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
+      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2 w-[100%]">
         <h3 className="font-bold text-sm">You might like</h3>
         <div className="flex flex-col gap-3 mt-3">
           <RecomendedPage

@@ -6,8 +6,8 @@ import WhoToFollow from "./components/WhoToFollow/WhoToFollow.jsx";
 
 function App() {
   return (
-    <div className="h-screen bg-black text-white">
-      <div className="flex items-center w-[60%] mx-auto h-full">
+    <div className="bg-black text-white">
+      <div className="flex items-top xl:w-[60%] lg:w-[75%] md:w-[90%] sm:w-[100%] mx-auto h-full">
         <Aside />
         <div className="h-full min-w-[490px] border-e border-[#333333] text-xs">
           <Profile />
