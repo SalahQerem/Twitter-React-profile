@@ -27,7 +27,7 @@ const RecomendedPage = ({
           )}
         </div>
       </div>
-      <Button style="bg-white text-black px-3 text-[0.7rem]">Follow</Button>
+      <Button className="bg-white text-black px-3 text-[0.7rem]">Follow</Button>
     </div>
   );
 };
