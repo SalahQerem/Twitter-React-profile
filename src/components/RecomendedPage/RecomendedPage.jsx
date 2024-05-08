@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button/Button.jsx";
 import Image from "../Image/Image.jsx";
 import NameWithSub from "../NameWithSub/NameWithSub.jsx";
+import { Box, Link, Typography } from "@mui/material";
 
 const RecomendedPage = ({
   name,
@@ -11,24 +12,24 @@ const RecomendedPage = ({
   descriptionLink,
 }) => {
   return (
-    <div className="flex items-start justify-between">
-      <div className="flex items-start gap-2">
+    <Box className="flex items-start justify-between">
+      <Box className="flex items-start gap-2">
         <Image src={accountImg} alt="account image" style="w-7 bg-white" />
-        <div>
+        <Box>
           <NameWithSub name={name} sub={sub} nameStyle="font-normal" />
           {description && (
-            <p className="font-normal text-[0.7rem]">
+            <Typography variant="caption">
               {description}
-              <a href="#" className="text-[#1D9BF0]">
+              <Link href="#" sx={{ color: "#1D9BF0", textDecoration: "none" }}>
                 {descriptionLink}
-              </a>
+              </Link>
               .
-            </p>
+            </Typography>
           )}
-        </div>
-      </div>
+        </Box>
+      </Box>
       <Button className="bg-white text-black px-3 text-[0.7rem]">Follow</Button>
-    </div>
+    </Box>
   );
 };
 
