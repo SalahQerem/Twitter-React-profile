@@ -19,7 +19,7 @@ const Aside = () => {
     </ListItem>
   ));
   return (
-    <Box className="h-screen flex justify-between flex-col p-2 w-[210px]">
+    <Box className="flex justify-between flex-col p-2 w-[210px]">
       <Box>
         <Link href="#">
           <FontAwesomeIcon icon={faXTwitter} size="2x" color="white" />
