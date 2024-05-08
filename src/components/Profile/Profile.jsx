@@ -25,7 +25,7 @@ import { Box, Typography, Link, List, ListItem } from "@mui/material";
 const Profile = () => {
   return (
     <Box>
-      <Box className="flex items-center justify-start gap-6 px-3">
+      <Box className="flex items-center justify-start gap-6 px-3 py-1">
         <ArrowLeft size="20px" />
         <NameWithSub
           name="React"
@@ -61,7 +61,7 @@ const Profile = () => {
             @reactjs
           </Typography>
         </Box>
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle2" fontSize={"1rem"}>
           The library for web and native user interfaces
         </Typography>
         <Box className="flex items-center gap-4">
@@ -109,7 +109,11 @@ const Profile = () => {
               style="w-4 translate-x-[-18px]"
             />
           </Box>
-          <Typography color="rgb(102 102 102 / 1)" variant="subtitle2">
+          <Typography
+            fontSize={"0.8rem"}
+            color="rgb(102 102 102 / 1)"
+            variant="subtitle2"
+          >
             Followed by Mohammad Kukhun, Yazen Alsade 💫 and 14 others you
             follow
           </Typography>
@@ -210,12 +214,12 @@ const Profile = () => {
               </Button>
             </ListItem>
             <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
-              <Box className="flex items-center gap-2">
+              <Button className="flex items-center gap-2">
                 <BarChart2 color="#666" size="15px" />
                 <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
                   1.1M
                 </Typography>
-              </Box>
+              </Button>
             </ListItem>
             <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
               <Button>

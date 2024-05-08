@@ -9,10 +9,10 @@ import theme from "./Theme/theme.js";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box className="bg-black text-white">
-        <Box className="flex xl:w-[70%] lg:w-[80%] md:w-[90%] sm:w-[100%] mx-auto">
+      <Box className="bg-black text-white h-screen">
+        <Box className="flex xl:w-[65%] lg:w-[78%] md:w-[90%] sm:w-[100%] mx-auto">
           <Aside />
-          <Box className="min-w-[490px] border-e border-[#333333] text-sm">
+          <Box className="profile bg-black placeholder:min-w-[490px] border-x border-[#333333] text-sm h-screen overflow-auto">
             <Profile />
             <WhoToFollow />
           </Box>

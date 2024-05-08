@@ -7,6 +7,7 @@ import Trend from "../Trend/Trend.jsx";
 import RecomendedPage from "../RecomendedPage/RecomendedPage.jsx";
 import { SearchIconWrapper, SearchInput, StyledInputBase } from "./styls.js";
 import { trends } from "./trends.js";
+import { Box, Link, Typography } from "@mui/material";
 
 function Recommendations() {
   const renderTrends = trends.map((trend) => (
@@ -20,7 +21,7 @@ function Recommendations() {
   ));
 
   return (
-    <div className="w-[600px] ps-4 pe-2 flex flex-col gap-3 h-full pt-2">
+    <Box className="w-[600px] ps-4 pe-2 flex flex-col gap-3 h-full pt-2">
       <SearchInput
         sx={{
           borderRadius: "9999px",
@@ -38,9 +39,11 @@ function Recommendations() {
           sx={{ fontSize: "14px" }}
         />
       </SearchInput>
-      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2 w-[100%]">
-        <h3 className="font-bold text-sm">You might like</h3>
-        <div className="flex flex-col gap-3 mt-3">
+      <Box className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2 w-[100%]">
+        <Typography variant="h3" fontSize={"0.9rem"} fontWeight={"700"}>
+          You might like
+        </Typography>
+        <Box className="flex flex-col gap-3 mt-3">
           <RecomendedPage
             accountImg={tailwindCSS}
             name="Tailwind CSS"
@@ -56,42 +59,101 @@ function Recommendations() {
             name="freeCodeCamp.org"
             sub="@freeCodeCamp"
           />
-        </div>
-        <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
+        </Box>
+        <Link
+          href="#"
+          fontSize={"0.75rem"}
+          sx={{
+            color: "#1D9BF0",
+            textDecoration: "none",
+            marginBlockStart: "0.75rem",
+            display: "block",
+          }}
+        >
           Show more
-        </a>
-      </div>
-      <div className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
-        <h3 className="font-bold text-sm">Trends for you</h3>
-        <div className="flex flex-col gap-4 mt-3">{renderTrends}</div>
-        <a href="#" className="text-[#1D9BF0] block mt-4 mb-1 text-xs">
+        </Link>
+      </Box>
+      <Box className="bg-[rgba(255,255,255,0.1)] rounded-xl px-3 py-2">
+        <Typography
+          variant="h3"
+          fontSize={"0.9rem"}
+          fontWeight={"700"}
+          className="font-bold text-sm"
+        >
+          Trends for you
+        </Typography>
+        <Box className="flex flex-col gap-4 mt-3">{renderTrends}</Box>
+        <Link
+          href="#"
+          fontSize={"0.75rem"}
+          sx={{
+            color: "#1D9BF0",
+            textDecoration: "none",
+            marginBlockStart: "1rem",
+            display: "block",
+          }}
+        >
           Show more
-        </a>
-      </div>
-      <div className="ps-3">
-        <p className="text-secondary text-[0.6rem] flex flex-wrap gap-x-2">
-          <a href="#" className="hover:underline">
+        </Link>
+      </Box>
+      <Box className="ps-3">
+        <Typography
+          color="rgb(102 102 102 / 1)"
+          fontSize={"0.6rem"}
+          className="flex flex-wrap gap-x-2"
+        >
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             Terms of Service
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             Privacy Policy
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             Cookie Policy
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             Accessibility
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             Ads info
-          </a>
-          <a href="#" className="hover:underline">
+          </Link>
+          <Link
+            href="#"
+            color="rgb(102 102 102 / 1)"
+            underline="none"
+            className="hover:underline"
+          >
             More...
-          </a>
+          </Link>
           © 2024 X Corp.
-        </p>
-      </div>
-    </div>
+        </Typography>
+      </Box>
+    </Box>
   );
 }
 

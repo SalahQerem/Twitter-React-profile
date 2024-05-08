@@ -12,7 +12,7 @@ const RecomendedPage = ({
   descriptionLink,
 }) => {
   return (
-    <Box className="flex items-start justify-between">
+    <Box className="flex items-start justify-between min-w-[230px]">
       <Box className="flex items-start gap-2">
         <Image src={accountImg} alt="account image" style="w-7 bg-white" />
         <Box>

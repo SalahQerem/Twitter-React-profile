@@ -3,12 +3,15 @@ import WhoToFollowItem from "../WhoToFollowItem/WhoToFollowItem.jsx";
 import freeCodeCamp from "../../assets/freeCodeCamp.jpg";
 import tailwindCSS from "../../assets/test.png";
 import typescript from "../../assets/typescript.png";
+import { Box, Link, Typography } from "@mui/material";
 
 const WhoToFollow = () => {
   return (
-    <div className="p-2 border-b border-[#333]">
-      <h3 className="font-bold text-sm">Who to follow</h3>
-      <div className="flex flex-col gap-3 mt-3">
+    <Box className="p-2 border-b border-[#333] mb-3">
+      <Typography variant="h3" fontSize={"0.9rem"} fontWeight={"700"}>
+        Who to follow
+      </Typography>
+      <Box className="flex flex-col gap-3 mt-3">
         <WhoToFollowItem
           name="freeCodeCamp.org"
           sub="@freeCodeCamp"
@@ -38,11 +41,20 @@ const WhoToFollow = () => {
           otherFollowers="Yazeed Obaid and 9"
           accountImg={tailwindCSS}
         />
-      </div>
-      <a href="#" className="text-[#1D9BF0] block mt-2 ms-2">
+      </Box>
+      <Link
+        href="#"
+        sx={{
+          color: "#1D9BF0",
+          textDecoration: "none",
+          marginBlockStart: "0.5rem",
+          marginInlineStart: "0.5rem",
+          display: "block",
+        }}
+      >
         Show more
-      </a>
-    </div>
+      </Link>
+    </Box>
   );
 };
 
