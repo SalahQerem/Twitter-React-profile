@@ -20,24 +20,25 @@ import userImage1 from "../../assets/user-photo-1.jpg";
 import userImage2 from "../../assets/user-photo-2.jpg";
 import userImage3 from "../../assets/user-photo-3.jpg";
 import userImage4 from "../../assets/user-photo-4.jpg";
+import { Box } from "@mui/material";
 
 const Profile = () => {
   return (
-    <div>
-      <div className="flex items-center justify-start gap-6 px-3">
+    <Box>
+      <Box className="flex items-center justify-start gap-6 px-3">
         <ArrowLeft size="20px" />
         <NameWithSub
           name="React"
           sub="2,611 posts"
           nameStyle="font-semibold text-base"
         />
-      </div>
+      </Box>
       <img src={profileCover} alt="profile cover photo" />
-      <div className="flex justify-end items-center relative p-2">
-        <div className="rounded-full p-1 bg-black w-fit absolute top-0 translate-y-[-50%] left-3">
+      <Box className="flex justify-end items-center relative p-2">
+        <Box className="rounded-full p-1 bg-black w-fit absolute top-0 translate-y-[-50%] left-3">
           <Image src={profilePhoto} alt="profile personal photo" style="w-24" />
-        </div>
-        <div className="flex items-center gap-2">
+        </Box>
+        <Box className="flex items-center gap-2">
           <Button style="border border-[#5e5e5e]">
             <Ellipsis size={"15px"} />
           </Button>
@@ -45,27 +46,27 @@ const Profile = () => {
             <BellPlus size={"15px"} />
           </Button>
           <Button style="border border-[#5e5e5e] px-3">Following</Button>
-        </div>
-      </div>
-      <div className="flex flex-col gap-2 mt-1 p-2">
-        <div>
+        </Box>
+      </Box>
+      <Box className="flex flex-col gap-2 mt-1 p-2">
+        <Box>
           <h1 className="text-[0.75rem] font-semibold text-base">React</h1>
           <p className="text-secondary text-[0.7rem]">@reactjs</p>
-        </div>
+        </Box>
         <p className="">The library for web and native user interfaces</p>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1">
+        <Box className="flex items-center gap-4">
+          <Box className="flex items-center gap-1">
             <Link color="#666" size="15px" />
             <a href="https://react.dev/" className="text-[#1D9BF0]">
               react.dev
             </a>
-          </div>
-          <div className="flex items-center gap-1">
+          </Box>
+          <Box className="flex items-center gap-1">
             <Calendar color="#666" size="15px" />
             <p className="text-secondary">Joined July 2013</p>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
+          </Box>
+        </Box>
+        <Box className="flex items-center gap-4">
           <NameWithSub
             name="267"
             sub="Following"
@@ -78,9 +79,9 @@ const Profile = () => {
             containerStyle="flex items-center gap-1"
             nameStyle="text-[0.7rem]"
           />
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="flex items-center w-[40px]">
+        </Box>
+        <Box className="flex items-center gap-1">
+          <Box className="flex items-center w-[40px]">
             <Image src={userImage1} alt="user image 1" style="w-4 z-20" />
             <Image
               src={userImage2}
@@ -92,14 +93,14 @@ const Profile = () => {
               alt="user image 3"
               style="w-4 translate-x-[-18px]"
             />
-          </div>
+          </Box>
           <p className="text-secondary">
             Followed by Mohammad Kukhun, Yazen Alsade 💫 and 14 others you
             follow
           </p>
-        </div>
-      </div>
-      <div className="mt-1">
+        </Box>
+      </Box>
+      <Box className="mt-1">
         <ul className="decoration-0 flex items-center justify-around border-b border-[#333333]">
           <li className="pb-3 px-1 border-b-2 border-[#1d9bf0] rounded-sm">
             <h2>Posts</h2>
@@ -114,16 +115,16 @@ const Profile = () => {
             <h2 className="text-secondary">Likes</h2>
           </li>
         </ul>
-      </div>
-      <div className="pt-1 flex flex-col gap-1">
-        <div className="flex items-center gap-2 px-10">
+      </Box>
+      <Box className="pt-1 flex flex-col gap-1">
+        <Box className="flex items-center gap-2 px-10">
           <Repeat2 color="#666" size="15px" />
           <p className="text-secondary">React reposted</p>
-        </div>
-        <div className="flex justify-between px-4">
-          <div className="flex items-center gap-2">
+        </Box>
+        <Box className="flex justify-between px-4">
+          <Box className="flex items-center gap-2">
             <Image src={userImage4} alt="user image 4" style="w-7" />
-            <div>
+            <Box>
               <p className="font-bold">
                 danabramov.bsky.social{" "}
                 <span className="text-secondary font-normal">
@@ -137,13 +138,13 @@ const Profile = () => {
                 </a>
                 !
               </p>
-            </div>
-          </div>
+            </Box>
+          </Box>
           <button>
             <Ellipsis size="15px" color="#666" />
           </button>
-        </div>
-        <div>
+        </Box>
+        <Box>
           <ul className="decoration-0 flex items-center justify-around border-b border-[#333333] pt-1">
             <li className="pb-3 px-1">
               <button className="flex items-center gap-2">
@@ -175,9 +176,9 @@ const Profile = () => {
               </button>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
