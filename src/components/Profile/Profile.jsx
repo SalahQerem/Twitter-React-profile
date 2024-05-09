@@ -36,7 +36,11 @@ const Profile = () => {
       <img src={profileCover} alt="profile cover photo" />
       <Box className="flex justify-end items-center relative p-2">
         <Box className="rounded-full p-1 bg-black w-fit absolute top-0 translate-y-[-50%] left-3">
-          <Image src={profilePhoto} alt="profile personal photo" style="w-24" />
+          <Image
+            src={profilePhoto}
+            alt="profile personal photo"
+            className="w-24"
+          />
         </Box>
         <Box className="flex items-center gap-2">
           <Button className="border border-[#5e5e5e]">
@@ -50,18 +54,14 @@ const Profile = () => {
       </Box>
       <Box className="flex flex-col gap-2 mt-1 p-2">
         <Box>
-          <Typography variant="h1" fontSize="1.3rem" fontWeight="600">
+          <Typography variant="h1" className="text-2xl font-semibold">
             React
           </Typography>
-          <Typography
-            variant="subtitle2"
-            color="rgb(102 102 102 / 1)"
-            fontSize="0.75rem"
-          >
+          <Typography variant="subtitle2" className="text-secondary text-sm">
             @reactjs
           </Typography>
         </Box>
-        <Typography variant="subtitle2" fontSize={"1rem"}>
+        <Typography variant="subtitle2" className="text-base">
           The library for web and native user interfaces
         </Typography>
         <Box className="flex items-center gap-4">
@@ -69,14 +69,14 @@ const Profile = () => {
             <LinkIcon color="#666" size="15px" />
             <Link
               href="https://react.dev/"
-              sx={{ color: "#1D9BF0", textDecoration: "none" }}
+              className="text-[#1D9BF0] no-underline"
             >
               react.dev
             </Link>
           </Box>
           <Box className="flex items-center gap-1">
             <Calendar color="#666" size="15px" />
-            <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+            <Typography variant="subtitle2" className="text-secondary">
               Joined July 2013
             </Typography>
           </Box>
@@ -97,16 +97,16 @@ const Profile = () => {
         </Box>
         <Box className="flex items-center gap-1">
           <Box className="flex items-center w-[40px]">
-            <Image src={userImage1} alt="user image 1" style="w-4 z-20" />
+            <Image src={userImage1} alt="user image 1" className="w-4 z-20" />
             <Image
               src={userImage2}
               alt="user image 2"
-              style="w-4 translate-x-[-8px] z-10"
+              className="w-4 translate-x-[-8px] z-10"
             />
             <Image
               src={userImage3}
               alt="user image 3"
-              style="w-4 translate-x-[-18px]"
+              className="w-4 translate-x-[-18px]"
             />
           </Box>
           <Typography
@@ -120,28 +120,22 @@ const Profile = () => {
         </Box>
       </Box>
       <Box className="mt-1">
-        <List
-          sx={{ paddingY: 0 }}
-          className="flex items-center justify-around border-b border-[#333333]"
-        >
-          <ListItem
-            sx={{ width: "fit-content" }}
-            className="pb-3 px-1 border-b-2 border-[#1d9bf0] rounded-sm"
-          >
+        <List className="py-0 flex items-center justify-around border-b border-[#333333]">
+          <ListItem className="pb-3 px-1 border-b-2 border-[#1d9bf0] rounded-sm w-fit">
             <Typography variant="subtitle2">Posts</Typography>
           </ListItem>
-          <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
-            <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+          <ListItem className="pb-3 px-1 w-fit">
+            <Typography variant="subtitle2" className="text-secondary">
               Replies
             </Typography>
           </ListItem>
-          <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
-            <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+          <ListItem className="pb-3 px-1 w-fit">
+            <Typography variant="subtitle2" className="text-secondary">
               Media
             </Typography>
           </ListItem>
-          <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
-            <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+          <ListItem className="pb-3 px-1 w-fit">
+            <Typography variant="subtitle2" className="text-secondary">
               Likes
             </Typography>
           </ListItem>
@@ -150,13 +144,13 @@ const Profile = () => {
       <Box className="pt-1 flex flex-col gap-1">
         <Box className="flex items-center gap-2 px-10">
           <Repeat2 color="#666" size="15px" />
-          <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+          <Typography variant="subtitle2" className="text-secondary">
             React reposted
           </Typography>
         </Box>
         <Box className="flex justify-between px-4">
           <Box className="flex items-center gap-2">
-            <Image src={userImage4} alt="user image 4" style="w-7" />
+            <Image src={userImage4} alt="user image 4" className="w-7" />
             <Box>
               <Typography variant="subtitle2">
                 danabramov.bsky.social{" "}
@@ -170,10 +164,7 @@ const Profile = () => {
                 className="font-light"
               >
                 happy 10th birthday to{" "}
-                <Link
-                  href="#"
-                  sx={{ color: "#1D9BF0", textDecoration: "none" }}
-                >
+                <Link href="#" className="text-[#1D9BF0] no-underline">
                   @reactjs
                 </Link>
                 !
@@ -185,43 +176,40 @@ const Profile = () => {
           </Button>
         </Box>
         <Box>
-          <List
-            sx={{ paddingY: 0 }}
-            className="flex items-center justify-around border-b border-[#333333] pt-1"
-          >
-            <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
+          <List className="flex items-center justify-around border-b border-[#333333] pt-1 py-0">
+            <ListItem className="pb-3 px-1 w-fit">
               <Button className="flex items-center gap-2">
                 <MessageCircle color="#666" size="15px" />
-                <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+                <Typography variant="subtitle2" className="text-secondary">
                   46
                 </Typography>
               </Button>
             </ListItem>
-            <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
+            <ListItem className="pb-3 px-1 w-fit">
               <Button className="flex items-center gap-2">
                 <Repeat2 color="#666" size="15px" />
-                <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+                <Typography variant="subtitle2" className="text-secondary">
                   675
                 </Typography>
               </Button>
             </ListItem>
-            <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
+            <ListItem className="pb-3 px-1 w-fit">
               <Button className="flex items-center gap-2">
                 <Heart color="#666" size="15px" />
-                <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+                <Typography variant="subtitle2" className="text-secondary">
                   3701
                 </Typography>
               </Button>
             </ListItem>
-            <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
+            <ListItem className="pb-3 px-1 w-fit">
               <Button className="flex items-center gap-2">
                 <BarChart2 color="#666" size="15px" />
-                <Typography variant="subtitle2" color="rgb(102 102 102 / 1)">
+                <Typography variant="subtitle2" className="text-secondary">
                   1.1M
                 </Typography>
               </Button>
             </ListItem>
-            <ListItem sx={{ width: "fit-content" }} className="pb-3 px-1">
+            <ListItem className="pb-3 px-1 w-fit">
               <Button>
                 <ArrowUpFromLine color="#666" size="15px" />
               </Button>

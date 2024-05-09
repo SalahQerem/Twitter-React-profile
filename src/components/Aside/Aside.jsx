@@ -31,10 +31,9 @@ const Aside = () => {
       </Box>
       <Link
         href="#"
-        className="flex items-center justify-between gap-2"
-        sx={{ color: "white", textDecoration: "none" }}
+        className="text-white no-underline flex items-center justify-between gap-2"
       >
-        <Image src={profileImage} alt="user profile image" style="w-8" />
+        <Image src={profileImage} alt="user profile image" className="w-8" />
         <NameWithSub
           name="Mohammad Dwika..."
           sub="@MohammadDwika..."

@@ -7,15 +7,11 @@ const Trend = ({ name, type, posts, isArabic }) => {
     <Box className={`${!isArabic && "flex items-center justify-between"}`}>
       <Box>
         {type && <p className="text-secondary text-[0.65rem]">{type}</p>}
-        <Typography
-          fontSize={"0.75rem"}
-          fontWeight={"700"}
-          className={` ${isArabic && "text-end"}`}
-        >
+        <Typography className={`text-sm font-bold ${isArabic && "text-end"}`}>
           {name}
         </Typography>
         {posts && (
-          <Typography color="rgb(102 102 102 / 1)" fontSize={"0.65rem"}>
+          <Typography className="text-secondary text-[0.7rem]">
             {posts}
           </Typography>
         )}

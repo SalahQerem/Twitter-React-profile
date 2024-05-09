@@ -8,7 +8,7 @@ import { Box, Link, Typography } from "@mui/material";
 const WhoToFollow = () => {
   return (
     <Box className="p-2 border-b border-[#333] mb-3">
-      <Typography variant="h3" fontSize={"0.9rem"} fontWeight={"700"}>
+      <Typography variant="h3" className="text-sm font-bold">
         Who to follow
       </Typography>
       <Box className="flex flex-col gap-3 mt-3">
@@ -51,6 +51,7 @@ const WhoToFollow = () => {
           marginInlineStart: "0.5rem",
           display: "block",
         }}
+        className="text-[#1D9BF0] no-underline block mt-2 ms-2"
       >
         Show more
       </Link>

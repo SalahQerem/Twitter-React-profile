@@ -14,13 +14,13 @@ const RecomendedPage = ({
   return (
     <Box className="flex items-start justify-between min-w-[230px]">
       <Box className="flex items-start gap-2">
-        <Image src={accountImg} alt="account image" style="w-7 bg-white" />
+        <Image src={accountImg} alt="account image" className="w-7 bg-white" />
         <Box>
           <NameWithSub name={name} sub={sub} nameStyle="font-normal" />
           {description && (
             <Typography variant="caption">
               {description}
-              <Link href="#" sx={{ color: "#1D9BF0", textDecoration: "none" }}>
+              <Link href="#" className="text-[#1D9BF0] no-underline">
                 {descriptionLink}
               </Link>
               .

@@ -18,10 +18,7 @@ const WhoToFollowItem = ({
         <FontAwesomeIcon icon={faUser} color="#666" fontSize="10px" />
         <Typography
           variant="body2"
-          fontSize={"0.6rem"}
-          fontWeight={"500"}
-          color="rgb(102 102 102 / 1)"
-          paddingBlock={"0.25rem"}
+          className="text-[0.65rem] font-semibold text-secondary py-1"
         >
           {otherFollowers} others follow
         </Typography>
